@@ -15,7 +15,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      {/* quitar el margen con tailwind */}
+      <body
+        className={
+          inter.className + ' mg-0 bg-gray-100 text-gray-800 font-sans  p-0'
+        }
+      >
+        {children}
+      </body>
     </html>
   )
 }

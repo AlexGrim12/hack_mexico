@@ -9,6 +9,21 @@ import {
   Card,
   CardContent,
 } from '@mui/material'
+import Resizer from 'react-image-file-resizer'
+
+// Utility function to convert base64 to Blob
+const dataURLtoFile = (dataurl: string, filename: string) => {
+  const arr = dataurl.split(',')
+  const mimeMatch = arr[0].match(/:(.*?);/)
+  const mime = mimeMatch ? mimeMatch[1] : ''
+  const bstr = atob(arr[1])
+  let n = bstr.length
+  const u8arr = new Uint8Array(n)
+  while (n--) {
+    u8arr[n] = bstr.charCodeAt(n)
+  }
+  return new File([u8arr], filename, { type: mime })
+}
 
 export default function ImageAnalyzer() {
   const [image, setImage] = useState<string>('')
@@ -18,26 +33,33 @@ export default function ImageAnalyzer() {
     const file = event.target.files?.[0]
     if (!file) return
 
-    const reader = new FileReader()
-    reader.readAsDataURL(file)
-
-    reader.onload = () => {
-      if (typeof reader.result === 'string') {
-        setImage(reader.result)
-      }
-    }
+    // Resize the image before setting it to state
+    Resizer.imageFileResizer(
+      file, // The file
+      800, // maxWidth
+      600, // maxHeight
+      'JPEG', // compressFormat
+      70, // quality
+      0, // rotation
+      (uri) => {
+        // You can also use the Blob here instead of a base64 string
+        // const file = dataURLtoFile(uri, file.name);
+        setImage(uri as string) // Cast uri to string
+      },
+      'base64'
+    )
   }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-
     if (!image) {
       alert('Upload an image.')
       return
     }
 
     try {
-      const response = await fetch('api/analyze-image', {
+      // If using Blob, update content-type and send the Blob in the body
+      const response = await fetch('/api/analyze-image', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
