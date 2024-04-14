@@ -21,7 +21,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ products }) => {
       <Grid container spacing={2}>
         {products.map((product) => (
           <Grid item xs={12} sm={6} md={4} key={product.id}>
-            <ProductCard product={product} />
+            <ProductCard product={product} onAddToCart={function (): void {}} />
           </Grid>
         ))}
       </Grid>
