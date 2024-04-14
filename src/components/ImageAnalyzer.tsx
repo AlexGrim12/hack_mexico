@@ -44,7 +44,7 @@ export default function ImageAnalyzer() {
       (uri) => {
         // You can also use the Blob here instead of a base64 string
         // const file = dataURLtoFile(uri, file.name);
-        setImage(uri as string) // Cast uri to string
+        setImage(uri.toString()) // Cast uri to string
       },
       'base64'
     )

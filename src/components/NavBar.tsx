@@ -1,6 +1,6 @@
 'use client'
 import * as React from 'react'
-import Link from 'next/link' // Importa Link de Next.js
+import Link from 'next/link'
 import {
   List,
   ListItem,
@@ -14,6 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
+import AccountCircleIcon from '@mui/icons-material/AccountCircle' // Importa el ícono de cuenta
 
 const SidebarMenu: React.FC = () => {
   const [open, setOpen] = React.useState(false)
@@ -45,6 +46,13 @@ const SidebarMenu: React.FC = () => {
               <MonetizationOnIcon />
             </ListItemIcon>
             <ListItemText primary="Vender" />
+          </ListItem>
+          {/* Agrega el enlace de inicio de sesión */}
+          <ListItem button component={Link} href="/login">
+            <ListItemIcon>
+              <AccountCircleIcon />
+            </ListItemIcon>
+            <ListItemText primary="Iniciar sesión" />
           </ListItem>
         </List>
         <Divider />
