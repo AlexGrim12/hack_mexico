@@ -62,14 +62,14 @@ const SidebarMenu: React.FC = () => {
           </ListItem>
         </List>
         <Divider />
-        <List>
+        {/* <List>
           <ListItem button onClick={toggleDarkMode}>
             <ListItemIcon>
               {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
             </ListItemIcon>
             <ListItemText primary={darkMode ? 'Modo claro' : 'Modo oscuro'} />
           </ListItem>
-        </List>
+        </List> */}
       </Drawer>
     </React.Fragment>
   )
