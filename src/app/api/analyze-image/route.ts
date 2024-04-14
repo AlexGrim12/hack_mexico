@@ -22,10 +22,7 @@ export async function POST(request: Request) {
       {
         role: 'user',
         content: JSON.stringify([
-          {
-            type: 'text',
-            text: 'give me a title and description of the image',
-          },
+          { type: 'text', text: 'Describe the image' },
           { type: 'image_url', image_url: image },
         ]),
       },
