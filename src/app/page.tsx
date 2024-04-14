@@ -1,9 +1,7 @@
 // src/app/page.tsx
 
-import ImageAnalyzerClient from '@/components/ImageAnalyzer'
 import NavBar from '@/components/NavBar'
 import HomeScreen from './HomeScreen'
-
 interface Product {
   id: string
   name: string
