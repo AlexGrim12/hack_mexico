@@ -1,3 +1,4 @@
+'use client'
 import * as React from 'react'
 import ProductCard from '@/components/ProductCard'
 import Grid from '@mui/material/Grid'
@@ -24,7 +25,6 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ products }) => {
           </Grid>
         ))}
       </Grid>
-      
     </>
   )
 }

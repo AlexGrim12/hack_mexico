@@ -12,7 +12,7 @@ interface Product {
   price: number
 }
 
-export default function Home() {
+export default function Page() {
   const exampleProducts: Product[] = [
     {
       id: '1',
