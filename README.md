@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hack México - Tienda en Línea
 
-## Getting Started
+¡Bienvenido a la tienda en línea Fresher! Este proyecto es una aplicación web diseñada para ofrecer una experiencia de compra en línea fácil y conveniente para nuestros clientes. Puedes explorar una variedad de productos exclusivos y encontrar lo que necesitas de manera rápida y sencilla.
 
-First, run the development server:
+## Demo en Línea
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Puedes acceder a la versión en línea de la tienda en [hack-mexico.vercel.app](https://hack-mexico.vercel.app/landingpage). ¡Explora los productos disponibles y disfruta de la experiencia de compra!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Ejecución en Local
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Si prefieres ejecutar la aplicación en tu propio entorno local, sigue estos pasos:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clona este repositorio en tu máquina local:
 
-## Learn More
+   ```bash
+   git clone https://github.com/AlexGrim12/hack_mexico
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Navega al directorio del proyecto:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   cd hack_mexico
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. Instala las dependencias del proyecto:
 
-## Deploy on Vercel
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Inicia el servidor de desarrollo:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```bash
+   npm run dev
+   ```
+
+5. Abre tu navegador web y visita `http://localhost:3000` para ver la aplicación en ejecución.
+
+## Características Principales
+
+- Exploración de productos: Explora una amplia variedad de productos disponibles en la tienda.
+- Detalles del producto: Obtén información detallada sobre cada producto, incluyendo imágenes, descripciones y precios.
+- Carrito de compras: Agrega productos al carrito y gestiona tu selección antes de realizar la compra.
+- Registro y inicio de sesión: Crea una cuenta o inicia sesión para acceder a características adicionales y realizar compras.
+- Tema oscuro: Cambia entre el modo claro y el modo oscuro según tus preferencias.
+
+## Tecnologías Utilizadas
+
+- **Next.js**: Framework de React para el desarrollo de aplicaciones web.
+- **Material-UI**: Biblioteca de componentes de React para una interfaz de usuario atractiva y consistente.
+- **Vercel**: Plataforma de despliegue y alojamiento para proyectos de frontend.
+
+## Contribuir
+
+¡Las contribuciones son bienvenidas! Si deseas contribuir al proyecto, asegúrate de revisar las [pautas de contribución](CONTRIBUTING.md) antes de enviar tu solicitud de extracción.
+
+## Problemas y Sugerencias
+
+Si encuentras algún problema o tienes alguna sugerencia para mejorar la aplicación, no dudes en [crear un nuevo problema](https://github.com/AlexGrim12/hack_mexico/issues). Estamos abiertos a cualquier comentario que pueda ayudar a mejorar la experiencia del usuario.
+
+¡Gracias por usar la tienda en línea de Fresher!
