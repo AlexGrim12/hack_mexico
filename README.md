@@ -1,4 +1,4 @@
-# Hack México - Tienda en Línea
+# Fresher - Hack México - Tienda en Línea
 
 ¡Bienvenido a la tienda en línea Fresher! Este proyecto es una aplicación web diseñada para ofrecer una experiencia de compra en línea fácil y conveniente para nuestros clientes. Puedes explorar una variedad de productos exclusivos y encontrar lo que necesitas de manera rápida y sencilla.
 
